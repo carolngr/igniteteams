@@ -1,4 +1,5 @@
-import { ActivityIndicator } from "react-native";
+
+import { StatusBar } from "react-native";
 import { ThemeProvider } from "styled-components";
 import { 
   useFonts,
@@ -19,6 +20,11 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
+      <StatusBar
+        barStyle="light-content"
+        backgroundColor="transparent"
+        translucent
+      />
     {fontsLoaded ? <Groups /> : <Loading/> }
     </ThemeProvider>
   );
