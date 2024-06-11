@@ -18,9 +18,7 @@ export function Header({ showBackButton = false }: Props) {
 
       
       <Logo
-        source={{
-          uri: 'https://reactnative.dev/img/tiny_logo.png',
-        }}
+        source={logoImg}
       />
     </Container>
   )
