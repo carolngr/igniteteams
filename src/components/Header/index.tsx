@@ -1,11 +1,29 @@
-import { Container, Logo } from "./styles";
+import React from 'react';
+import {View, Image, StyleSheet, Text} from 'react-native';
+import { BackButton, BackIcon, Container, Logo } from "./styles";
 
 import logoImg from '@assets/logo.png';
 
-export function Header() {
+type Props = {
+  showBackButton?: boolean;
+}
+
+export function Header({ showBackButton = false }: Props) {
   return (
     <Container>
-      <Logo source={require('../../assets/logo.png')} resizeMode='contain' />
+      {
+        showBackButton && 
+        <BackButton>
+          <BackIcon />
+        </BackButton>
+      }
+
+      
+      <Logo
+        source={{
+          uri: 'https://reactnative.dev/img/tiny_logo.png',
+        }}
+      />
     </Container>
   )
 }
