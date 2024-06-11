@@ -15,9 +15,9 @@ module.exports = function(api) {
             '@storage': './src/storage',
             '@theme': './src/theme',
             '@utils': './src/utils',
-          },
-        },
-      ],
-    ],
+          }
+        }
+      ]
+    ]
   };
 };
