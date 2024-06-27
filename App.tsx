@@ -9,7 +9,7 @@ import {
 
 import theme from './src/theme';
 
-import { Players } from "@screens/Players";
+import { Routes } from './src/routes';
 
 import { Loading } from "@components/Loading";
 
@@ -24,7 +24,7 @@ export default function App() {
         backgroundColor="transparent"
         translucent
       />
-    {fontsLoaded ? <Players /> : <Loading/> }
+    {fontsLoaded ? <Routes /> : <Loading/> }
     </ThemeProvider>
   );
 }
